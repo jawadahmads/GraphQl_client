@@ -47,7 +47,7 @@ function HistoryPage() {
     <>
       <HeaderHistory>
         <h1>History</h1>
-        <SpanSpace nonce="hey" onClick={() => dispatch(clearAll())}>
+        <SpanSpace onClick={() => dispatch(clearAll())}>
           <BooleanClear size={20} />
         </SpanSpace>
       </HeaderHistory>

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { type PayloadAction } from "@reduxjs/toolkit";
 import History from "../../ui/NavbarUi/History";
 
-interface History {
+export interface History {
   id: number;
   query: string;
   save: boolean;
