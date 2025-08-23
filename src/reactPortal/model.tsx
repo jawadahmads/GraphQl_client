@@ -44,18 +44,20 @@ function Modal({ isOpen, onClose, children }: PorpsModel) {
   });
 
   return createPortal(
-    <ModelDiv ref={modalRef}>
-      <div
-        style={{
-          background: "white",
-          padding: "20px",
-          borderRadius: "8px",
-        }}
-      >
-        {children}
-        <button onClick={onClose}>Close</button>
-      </div>
-    </ModelDiv>,
+    <>
+      <ModelDiv ref={modalRef}>
+        <div
+          style={{
+            background: "white",
+            padding: "20px",
+            borderRadius: "8px",
+          }}
+        >
+          {children}
+          <button onClick={onClose}>Close</button>
+        </div>
+      </ModelDiv>
+    </>,
     document.body
   );
 }

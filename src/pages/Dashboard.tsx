@@ -4,6 +4,8 @@ import HistoryPage from "../pages/HistoryPage";
 import DocsPage from "../pages/DocsPage";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
+import Shortcutkey from "../components/ShortcutkeyModel";
+import SettingModel from "../components/SettingModel";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -25,6 +27,8 @@ function Dashboard() {
           {toggleString === "docs" && <DocsPage />}
           {toggleString === "history" && <HistoryPage />}
         </SpacedDiv>
+        <Shortcutkey />
+        <SettingModel />
       </StyledDiv>
     </>
   );

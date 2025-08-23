@@ -1,13 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import toggleReducer from "./features/toggleSlice";
 import hisotryReducer from "./features/historySlice";
-import modelReducer from "./features/modelSlice";
-
+import settingReducer from "./features/settingSlice";
+import shortcutkeyReducer from "./features/shortcutkey";
 export const store = configureStore({
   reducer: {
     toggle: toggleReducer,
     history: hisotryReducer,
-    model: modelReducer,
+    setting: settingReducer,
+    shortcutkey: shortcutkeyReducer,
   },
 });
 
