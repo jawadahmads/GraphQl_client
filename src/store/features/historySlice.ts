@@ -1,0 +1,70 @@
+import { createSlice } from "@reduxjs/toolkit";
+import { type PayloadAction } from "@reduxjs/toolkit";
+import History from "../../ui/NavbarUi/History";
+
+interface History {
+  id: number;
+  query: string;
+  save: boolean;
+  lable?: string;
+}
+
+interface PayLoadEdit {
+  id: number;
+  lable: string;
+}
+const initialState: History[] = [
+  {
+    id: 1,
+    query: "query { characters { results { id name image } } }",
+    save: true,
+  },
+  {
+    id: 2,
+    query: "query { characters { results { id name image } } }",
+    save: false,
+  },
+];
+
+const HistorySlice = createSlice({
+  name: "history",
+  initialState,
+  reducers: {
+    deleteHistory: (state, actions: PayloadAction<number>): History[] => {
+      return state.filter((element) => {
+        return element.id !== actions.payload;
+      });
+    },
+
+    editLable: (state, actions: PayloadAction<PayLoadEdit>): History[] => {
+      return state.map((element) => {
+        if (element.id === actions.payload.id) {
+          return { ...element, lable: actions.payload.lable };
+        }
+
+        return element;
+      });
+    },
+
+    toggleSave: (state, actions: PayloadAction<number>): History[] => {
+      return state.map((element) => {
+        if (element.id === actions.payload) {
+          return { ...element, save: !element.save };
+        }
+
+        return element;
+      });
+    },
+
+    clearAll: (state): History[] => {
+      return state.filter((element) => {
+        return element.save;
+      });
+    },
+  },
+});
+
+export const { deleteHistory, toggleSave, editLable, clearAll } =
+  HistorySlice.actions;
+
+export default HistorySlice.reducer;
