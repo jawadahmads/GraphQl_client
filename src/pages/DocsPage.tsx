@@ -1,5 +1,5 @@
 function DocsPage() {
-  return <div>DocsPage</div>;
+  return <div style={{ margin: "1rem" }}>DocsPage</div>;
 }
 
 export default DocsPage;

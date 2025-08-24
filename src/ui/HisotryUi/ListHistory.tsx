@@ -39,8 +39,10 @@ function ListHistory() {
             }}
             key={obj.id}
           >
-            <div>{obj.lable ? obj.lable : obj.query}</div>
-            <div>
+            <div style={{ whiteSpace: "nowrap" }}>
+              {obj.lable ? obj.lable : obj.query}
+            </div>
+            <div style={{ display: "flex" }}>
               <SpanSpace onClick={() => dispatch(deleteHistory(obj.id))}>
                 <MdDeleteForever />
               </SpanSpace>

@@ -44,7 +44,7 @@ function HistoryPage() {
   }
 
   return (
-    <>
+    <div style={{ margin: "1rem" }}>
       <HeaderHistory>
         <h1>History</h1>
         <SpanSpace onClick={() => dispatch(clearAll())}>
@@ -52,7 +52,7 @@ function HistoryPage() {
         </SpanSpace>
       </HeaderHistory>
       <ListHistory />
-    </>
+    </div>
   );
 }
 

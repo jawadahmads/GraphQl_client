@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
 import { store } from "../store/store";
 import { Provider } from "react-redux";
-
+import "../styles/global.css";
 // -----------------------------Pages------------------------------------
 
 import Dashboard from "../pages/Dashboard";
