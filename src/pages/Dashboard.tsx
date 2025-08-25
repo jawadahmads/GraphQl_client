@@ -6,13 +6,11 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import Shortcutkey from "../components/ShortcutkeyModel";
 import SettingModel from "../components/SettingModel";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/components/ui/resizable";
+import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import { useRef } from "react";
 import type { ImperativePanelHandle } from "react-resizable-panels";
+import CodePanel from "../panel/CodePanel";
+import ResizeableComp from "@/panel/components/ResizeableComp";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -34,7 +32,7 @@ function Dashboard() {
   const setPanelWidth = () => {
     const panel = ref.current;
     if (panel) {
-      panel.expand(50);
+      panel.expand(30);
     }
   };
   if (toggleString === "") {
@@ -46,39 +44,30 @@ function Dashboard() {
   return (
     <>
       <StyledDiv>
+        <Shortcutkey />
+        <SettingModel />
         <SideBar />
         <div style={{ margin: "1rem" }}>
           <ResizablePanelGroup direction="horizontal">
-            <ResizablePanel
-              collapsible
-              ref={ref}
-              defaultSize={50} // 30% width
-              minSize={20}
-            >
+            {/* left pannel */}
+            <ResizablePanel collapsible ref={ref} defaultSize={30} minSize={20}>
               {toggleString === "docs" && <DocsPage />}
               {toggleString === "history" && <HistoryPage />}
             </ResizablePanel>
-            <ResizableHandle />
-            <ResizablePanel>
-              <div
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  margin: "1rem",
-                  flexGrow: "1",
-                }}
-              >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,
-                rerum repellat! Quam alias tenetur vero natus, autem error est.
-                Ad rerum quaerat eos. Incidunt architecto nulla iure expedita
-                omnis dicta?
-              </div>
+            {/* handler */}
+            <ResizeableComp />
+            {/* right pannel */}
+            <ResizablePanel
+              style={{
+                outline: "1px solid rgba(128, 128, 128, 0.2)",
+                padding: "1rem",
+                borderRadius: "1rem",
+              }}
+            >
+              <CodePanel />
             </ResizablePanel>
           </ResizablePanelGroup>
         </div>
-
-        <Shortcutkey />
-        <SettingModel />
       </StyledDiv>
     </>
   );
