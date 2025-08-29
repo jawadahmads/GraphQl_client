@@ -59,9 +59,10 @@ function Dashboard() {
             {/* right pannel */}
             <ResizablePanel
               style={{
-                outline: "1px solid rgba(128, 128, 128, 0.2)",
+                border: "1px solid rgba(128, 128, 128, 0.2)",
                 padding: "1rem",
                 borderRadius: "1rem",
+                width: "1500px",
               }}
             >
               <CodePanel />

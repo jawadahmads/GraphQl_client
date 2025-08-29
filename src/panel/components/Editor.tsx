@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CodeMirror, { EditorView } from "@uiw/react-codemirror";
 import { createTheme } from "@uiw/codemirror-themes";
 import { javascript } from "@codemirror/lang-javascript";
@@ -38,18 +38,25 @@ const myTheme = createTheme({
 const largeTextTheme = EditorView.theme({
   // scroll bar
   ".cm-scroller::-webkit-scrollbar-thumb": {
-    background: "#4e4e4e",
-    borderRadius: " 25px",
-    opacity: "5%",
+    background: "rgba(78, 78, 78, 0.8)" /* instead of quoted hex + opacity */,
+    borderRadius: "25px",
+  },
+
+  "::-webkit-scrollbar-corner": {
+    background: "#191919",
+    borderBottomRightRadius: "50%",
   },
 
   ".cm-scroller::-webkit-scrollbar": {
     width: "7px",
+    height: "7px",
     margin: "0.4rem",
     borderRadius: "2px",
   },
 
-  ".cm-scroller::-webkit-scrollbar-thumb:hover": {},
+  ".cm-scroller::-webkit-scrollbar-thumb:hover": {
+    background: "rgba(120, 120, 120, 0.9)" /* hover effect */,
+  },
 
   ".cm-scroller::-webkit-scrollbar-track": {
     backgroundColor: "#191919",
@@ -105,7 +112,7 @@ const largeTextTheme = EditorView.theme({
 
 function Editor() {
   const [value, setValue] = React.useState("console.log('hello world!');");
-  const onChange = React.useCallback((val) => {
+  const onChange = React.useCallback((val: string) => {
     console.log("val:", val);
     setValue(val);
   }, []);
