@@ -1,8 +1,9 @@
 import React from "react";
 import CodeMirror, { EditorView } from "@uiw/react-codemirror";
 import { createTheme } from "@uiw/codemirror-themes";
-import { javascript } from "@codemirror/lang-javascript";
 import { tags as t } from "@lezer/highlight";
+import { graphql } from "cm6-graphql";
+import { buildSchema as bs } from "graphql";
 
 const myTheme = createTheme({
   theme: "light",
@@ -109,9 +110,24 @@ const largeTextTheme = EditorView.theme({
     display: "none",
   },
 });
+const schema = bs(`
+  type User {
+    id: ID!
+    name: String!
+  }
+  type Query {
+    users: [User]
+  }
+`);
 
 function Editor() {
-  const [value, setValue] = React.useState("console.log('hello world!');");
+  const [value, setValue] = React.useState(`query {
+  users {
+    id
+    name
+  }
+}`);
+
   const onChange = React.useCallback((val: string) => {
     console.log("val:", val);
     setValue(val);
@@ -121,7 +137,7 @@ function Editor() {
     <CodeMirror
       value={value}
       height="100%"
-      extensions={[javascript({ jsx: true }), largeTextTheme]}
+      extensions={[graphql(), largeTextTheme]}
       onChange={onChange}
       theme={myTheme}
       style={{

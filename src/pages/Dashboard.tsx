@@ -15,6 +15,7 @@ import ResizeableComp from "@/panel/components/ResizeableComp";
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
+  flex-basis: 100%;
 `;
 
 function Dashboard() {
@@ -44,10 +45,8 @@ function Dashboard() {
   return (
     <>
       <StyledDiv>
-        <Shortcutkey />
-        <SettingModel />
         <SideBar />
-        <div style={{ margin: "1rem" }}>
+        <div style={{ margin: "1rem", flexGrow: 1 }}>
           <ResizablePanelGroup direction="horizontal">
             {/* left pannel */}
             <ResizablePanel collapsible ref={ref} defaultSize={30} minSize={20}>
@@ -62,13 +61,15 @@ function Dashboard() {
                 border: "1px solid rgba(128, 128, 128, 0.2)",
                 padding: "1rem",
                 borderRadius: "1rem",
-                width: "1500px",
+                width: "100%",
               }}
             >
               <CodePanel />
             </ResizablePanel>
           </ResizablePanelGroup>
         </div>
+        <Shortcutkey />
+        <SettingModel />
       </StyledDiv>
     </>
   );

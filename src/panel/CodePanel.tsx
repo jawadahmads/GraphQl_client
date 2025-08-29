@@ -18,7 +18,12 @@ function CodePanel() {
           </ResizablePanel>
           <ResizeableComp />
           <ResizablePanel
-            style={{ flex: "1", height: "100%", position: "relative" }}
+            style={{
+              flex: "1",
+              height: "100%",
+              position: "relative",
+              padding: "1rem",
+            }}
           >
             <Output />
           </ResizablePanel>

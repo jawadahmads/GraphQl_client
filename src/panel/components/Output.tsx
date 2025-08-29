@@ -57,7 +57,7 @@ function Output() {
   }, [ref]);
   return (
     <ScrollBarDiv>
-      <pre ref={ref}>{JSON.stringify(arr, null, 2)}</pre>
+      <pre ref={ref} style={{ padding: "1rem" }}></pre>
     </ScrollBarDiv>
   );
 }
