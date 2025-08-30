@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { SpanSpace } from "../../pages/HistoryPage";
-import type { History } from "../../store/features/historySlice";
+import { SpanSpace } from "./HistoryPage";
+import type { History } from "../store/features/historySlice";
 import { IoMdClose } from "react-icons/io";
 import { type Dispatch, type SetStateAction } from "react";
 import { useDispatch } from "react-redux";
-import { editLable } from "../../store/features/historySlice";
+import { editLable } from "../store/features/historySlice";
 
 const CancelSpace = styled.span`
   margin: 0 0.2rem;

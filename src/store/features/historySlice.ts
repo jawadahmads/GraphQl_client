@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { type PayloadAction } from "@reduxjs/toolkit";
-import History from "../../ui/NavbarUi/History";
-
 export interface History {
   id: number;
   query: string;
@@ -13,6 +11,7 @@ interface PayLoadEdit {
   id: number;
   lable: string;
 }
+
 const initialState: History[] = [
   {
     id: 1,
@@ -31,13 +30,18 @@ const HistorySlice = createSlice({
   initialState,
   reducers: {
     deleteHistory: (state, actions: PayloadAction<number>): History[] => {
-      return state.filter((element) => {
+      return state.filter((element: History) => {
         return element.id !== actions.payload;
       });
     },
 
+    createHistory: (state, action: PayloadAction<History>): History[] => {
+      state = [...state, action.payload];
+      return state;
+    },
+
     editLable: (state, actions: PayloadAction<PayLoadEdit>): History[] => {
-      return state.map((element) => {
+      return state.map((element: History) => {
         if (element.id === actions.payload.id) {
           return { ...element, lable: actions.payload.lable };
         }
@@ -57,14 +61,14 @@ const HistorySlice = createSlice({
     },
 
     clearAll: (state): History[] => {
-      return state.filter((element) => {
+      return state.filter((element: History) => {
         return element.save;
       });
     },
   },
 });
 
-export const { deleteHistory, toggleSave, editLable, clearAll } =
+export const { deleteHistory, toggleSave, editLable, clearAll, createHistory } =
   HistorySlice.actions;
 
 export default HistorySlice.reducer;

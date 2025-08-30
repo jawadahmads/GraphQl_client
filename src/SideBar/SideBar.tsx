@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import Docs from "../ui/NavbarUi/Docs";
-import History from "../ui/NavbarUi/History";
-import Refech from "../ui/NavbarUi/Refech";
-import Setting from "../ui/NavbarUi/Settings";
-import Shortcutkey from "../ui/NavbarUi/Shortcutkey";
-
+import Docs from "./NavbarUi/Docs";
+import History from "./NavbarUi/History";
+import Refech from "./NavbarUi/Refech";
+import Shortcutkey from "./ModelWindow/ShortcutkeyModel";
+import Settings from "./NavbarUi/Settings";
 const SideDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@ function SideBar() {
         </NoStyledDiv>
         <NoStyledDiv>
           <Refech />
-          <Setting />
+          <Settings />
           <Shortcutkey />
         </NoStyledDiv>
       </SideDiv>

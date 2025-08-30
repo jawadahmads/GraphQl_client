@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import "../styles/global.css";
 // -----------------------------Pages------------------------------------
 
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../Dashboard/Dashboard";
 
 const theme = {
   bodyBg: "#f5f5f5",

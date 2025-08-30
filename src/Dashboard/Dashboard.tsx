@@ -1,16 +1,19 @@
-import SideBar from "../components/SideBar";
+import SideBar from "../SideBar/SideBar";
 import styled from "styled-components";
-import HistoryPage from "../pages/HistoryPage";
-import DocsPage from "../pages/DocsPage";
+import HistoryPage from "../History/HistoryPage";
+import DocsPage from "../Docs/DocsPage";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
-import Shortcutkey from "../components/ShortcutkeyModel";
-import SettingModel from "../components/SettingModel";
-import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
+import Shortcutkey from "../SideBar/ModelWindow/ShortcutkeyModel";
+import SettingModel from "../SideBar/ModelWindow/SettingModel";
+import {
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/ShadcnComps/ui/resizable";
 import { useRef } from "react";
 import type { ImperativePanelHandle } from "react-resizable-panels";
-import CodePanel from "../panel/CodePanel";
-import ResizeableComp from "@/panel/components/ResizeableComp";
+import CodePanel from "../CodePanel/CodePanel";
+import ResizeableComp from "@/CodeEditor/Handler";
 
 const StyledDiv = styled.div`
   display: flex;

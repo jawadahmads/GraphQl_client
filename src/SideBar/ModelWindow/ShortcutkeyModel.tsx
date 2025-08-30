@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "../reactPortal/model";
-import { toggleShortcutkey } from "../store/features/shortcutkey";
-import type { RootState } from "../store/store";
+import Modal from "./model";
+import { toggleShortcutkey } from "../../store/features/shortcutkey";
+import type { RootState } from "../../store/store";
 import styled from "styled-components";
 
 const BackDrop = styled.div`

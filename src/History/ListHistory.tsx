@@ -1,10 +1,10 @@
 import { BsStar } from "react-icons/bs";
 import { MdDeleteForever, MdEdit } from "react-icons/md";
-import { SpanSpace } from "../../pages/HistoryPage";
+import { SpanSpace } from "./HistoryPage";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../store/store";
+import type { RootState } from "../store/store";
 import { BsStarFill } from "react-icons/bs";
-import { toggleSave, deleteHistory } from "../../store/features/historySlice";
+import { toggleSave, deleteHistory } from "../store/features/historySlice";
 import { useState } from "react";
 import ListEdit from "./ListEdit";
 

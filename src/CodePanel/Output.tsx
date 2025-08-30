@@ -52,7 +52,7 @@ function Output() {
 
   useEffect(() => {
     if (ref.current) {
-      ref.current.innerHTML = JSON.stringify(arr, null, 2);
+      ref.current.innerHTML = JSON.stringify(arr, null, 4);
     }
   }, [ref]);
   return (

@@ -1,5 +1,5 @@
 import { LuRefreshCw } from "react-icons/lu";
-import { StyledDivUi } from "../styledUiComps/styledContainer";
+import { StyledDivUi } from "./styledContainer";
 
 function Refech() {
   return (

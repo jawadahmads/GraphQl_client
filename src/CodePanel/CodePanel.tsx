@@ -1,7 +1,10 @@
-import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
-import ResizeableComp from "./components/ResizeableComp";
-import Editor from "@/panel/components/Editor";
-import Output from "./components/Output";
+import {
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/ShadcnComps/ui/resizable";
+import Handler from "../CodeEditor/Handler";
+import Editor from "@/CodeEditor/Editor";
+import Output from "./Output";
 
 function CodePanel() {
   return (
@@ -16,7 +19,8 @@ function CodePanel() {
           <ResizablePanel collapsible defaultSize={70} minSize={20}>
             <Editor />
           </ResizablePanel>
-          <ResizeableComp />
+          <Handler />
+
           <ResizablePanel
             style={{
               flex: "1",

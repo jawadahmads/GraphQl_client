@@ -1,7 +1,7 @@
 import { FaHistory } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { toggleHistory } from "../../store/features/toggleSlice";
-import { StyledDivUi } from "../styledUiComps/styledContainer";
+import { StyledDivUi } from "./styledContainer";
 
 function History() {
   const dispatch = useDispatch();

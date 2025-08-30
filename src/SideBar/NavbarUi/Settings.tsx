@@ -1,4 +1,4 @@
-import { StyledDivUi } from "../styledUiComps/styledContainer";
+import { StyledDivUi } from "./styledContainer";
 import { useDispatch } from "react-redux";
 import { toggleSetting } from "../../store/features/settingSlice";
 import { IoMdSettings } from "react-icons/io";

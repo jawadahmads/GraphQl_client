@@ -1,7 +1,7 @@
-import { ResizableHandle } from "@/components/ui/resizable";
+import { ResizableHandle } from "@/ShadcnComps/ui/resizable";
 import { useState } from "react";
 
-function ResizeableComp() {
+function Handler() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
@@ -26,4 +26,4 @@ function ResizeableComp() {
   );
 }
 
-export default ResizeableComp;
+export default Handler;
