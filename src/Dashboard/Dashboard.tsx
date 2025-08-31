@@ -6,10 +6,7 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import Shortcutkey from "../SideBar/ModelWindow/ShortcutkeyModel";
 import SettingModel from "../SideBar/ModelWindow/SettingModel";
-import {
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/ShadcnComps/ui/resizable";
+import { ResizablePanel, ResizablePanelGroup } from "@/Xternals/ui/resizable";
 import { useRef } from "react";
 import type { ImperativePanelHandle } from "react-resizable-panels";
 import CodePanel from "../CodePanel/CodePanel";

@@ -1,4 +1,4 @@
-import { ResizableHandle } from "@/ShadcnComps/ui/resizable";
+import { ResizableHandle } from "@/Xternals/ui/resizable";
 import { useState } from "react";
 
 function Handler() {

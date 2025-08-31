@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { MdClear } from "react-icons/md";
 import ListHistory from "./ListHistory";
 import { useDispatch, useSelector } from "react-redux";
-import { clearAll } from "../store/features/historySlice";
-import type { RootState } from "../store/store";
+import { type RootState } from "@/store/store";
+import { clearAll } from "@/store/features/historySlice";
 
 const HeaderHistory = styled.header`
   width: 100%;

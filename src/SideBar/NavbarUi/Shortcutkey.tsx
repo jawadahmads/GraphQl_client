@@ -1,8 +1,8 @@
-import { StyledDivUi } from "../styledUiComps/styledContainer";
 import { useDispatch } from "react-redux";
 import { toggleShortcutkey } from "../../store/features/shortcutkey";
 import { MdOutlineAppShortcut } from "react-icons/md";
-function Settings() {
+import { StyledDivUi } from "./styledContainer";
+function Shortcut() {
   const dispatch = useDispatch();
   return (
     <StyledDivUi
@@ -17,5 +17,4 @@ function Settings() {
   );
 }
 
-export default Settings;
-MdOutlineAppShortcut;
+export default Shortcut;

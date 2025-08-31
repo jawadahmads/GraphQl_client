@@ -3,12 +3,14 @@ import toggleReducer from "./features/toggleSlice";
 import hisotryReducer from "./features/historySlice";
 import settingReducer from "./features/settingSlice";
 import shortcutkeyReducer from "./features/shortcutkey";
+import queryReducer from "./features/querySlice";
 export const store = configureStore({
   reducer: {
     toggle: toggleReducer,
     history: hisotryReducer,
     setting: settingReducer,
     shortcutkey: shortcutkeyReducer,
+    query: queryReducer,
   },
 });
 

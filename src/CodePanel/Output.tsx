@@ -1,3 +1,4 @@
+import RunCode from "@/CodeEditor/RunCode";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
@@ -57,6 +58,7 @@ function Output() {
   }, [ref]);
   return (
     <ScrollBarDiv>
+      <RunCode />
       <pre ref={ref} style={{ padding: "1rem" }}></pre>
     </ScrollBarDiv>
   );

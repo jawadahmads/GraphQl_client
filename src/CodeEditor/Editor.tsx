@@ -1,10 +1,15 @@
-import React from "react";
+import { useCallback } from "react";
+import RunCode from "./RunCode";
 import CodeMirror from "@uiw/react-codemirror";
 import { myTheme } from "./theme";
 import { graphql } from "cm6-graphql";
 import { buildSchema as bs } from "graphql";
 import { editorStyling } from "./Style";
+import { useDispatch, useSelector } from "react-redux";
+import { setQuery } from "@/store/features/querySlice";
+import type { RootState } from "@/store/store";
 
+/** This is the Schema of the Query */
 const schema = bs(`
   type User {
     id: ID!
@@ -15,30 +20,29 @@ const schema = bs(`
   }
 `);
 
+/** This is the CODE Editor */
 function Editor() {
-  const [value, setValue] = React.useState(`query {
-  users {
-    id
-    name
-  }
-}`);
+  const query = useSelector((state: RootState) => state.query);
 
-  const onChange = React.useCallback((val: string) => {
-    console.log("val:", val);
-    setValue(val);
+  const dispatch = useDispatch();
+
+  const onChange = useCallback((val: string) => {
+    dispatch(setQuery(val));
   }, []);
 
   return (
-    <CodeMirror
-      value={value}
-      height="100%"
-      extensions={[graphql({ schema }), editorStyling]}
-      onChange={onChange}
-      theme={myTheme}
-      style={{
-        height: "100%",
-      }}
-    />
+    <>
+      <CodeMirror
+        value={query}
+        height="100%"
+        extensions={[graphql(), editorStyling]}
+        onChange={onChange}
+        theme={myTheme}
+        style={{
+          height: "100%",
+        }}
+      />
+    </>
   );
 }
 export default Editor;
