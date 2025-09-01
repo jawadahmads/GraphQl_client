@@ -2,15 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Modal from "./model";
 import { toggleShortcutkey } from "../../store/features/shortcutkey";
 import type { RootState } from "../../store/store";
-import styled from "styled-components";
-
-const BackDrop = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-`;
-
+import { BackDrop } from "./model";
 function Shortcutkey() {
   const modalState = useSelector((state: RootState) => {
     return state.shortcutkey;

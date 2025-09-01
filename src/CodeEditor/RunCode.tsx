@@ -2,6 +2,7 @@ import { createHistory } from "@/store/features/historySlice";
 import type { RootState } from "@/store/store";
 import { useDispatch, useSelector } from "react-redux";
 import { type History } from "@/store/features/historySlice";
+import { FaPlay } from "react-icons/fa";
 import { Button } from "@/Xternals/ui/button";
 
 export function RunCode() {
@@ -9,10 +10,10 @@ export function RunCode() {
     return state.query;
   });
 
-  const id = Math.floor(Math.random() * 1000000); // random number
   const dispatch = useDispatch();
 
   function RunQuery() {
+    const id = Math.floor(Math.random() * 1000000); // random number
     console.log("created");
     const history: History = {
       id: id,
@@ -28,22 +29,20 @@ export function RunCode() {
           position: "sticky",
           zIndex: "10000",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "flex-end",
           alignItems: "center",
         }}
       >
-        <h1 style={{ whiteSpace: "nowrap" }}>OUTPUT : </h1>
         <Button
           onClick={RunQuery}
           variant={"secondary"}
           style={{
-            borderRadius: "50%",
+            borderRadius: "1rem",
             width: "50px",
             height: "50px",
-            margin: "0 1rem",
           }}
         >
-          Run
+          <FaPlay />
         </Button>
       </div>
     </>

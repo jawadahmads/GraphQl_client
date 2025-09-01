@@ -8,7 +8,7 @@ function Docs() {
 
   return (
     <StyledDivUi onClick={() => dispatch(toggleDocs())}>
-      <SiGoogledocs size={30} />
+      <SiGoogledocs size={22} />
     </StyledDivUi>
   );
 }

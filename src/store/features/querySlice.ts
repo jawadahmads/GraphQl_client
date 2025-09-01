@@ -1,6 +1,14 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: string = "";
+const initialState: string = ` query {
+  characters {
+    results{
+      id 
+      name 
+      image
+    }
+  }
+}`;
 
 const querySlice = createSlice({
   name: "query",

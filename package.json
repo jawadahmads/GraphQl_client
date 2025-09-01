@@ -12,6 +12,8 @@
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.4",
     "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-toggle": "^1.1.10",
+    "@radix-ui/react-toggle-group": "^1.1.11",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.12",
     "@types/graphql": "^14.5.0",
@@ -22,6 +24,7 @@
     "clsx": "^2.1.1",
     "cm6-graphql": "^0.2.1",
     "graphql": "^16.11.0",
+    "highlight.js": "^11.11.1",
     "lucide-react": "^0.541.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -37,6 +40,7 @@
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@lezer/highlight": "^1.2.1",
+    "@types/highlightjs": "^9.12.6",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",

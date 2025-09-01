@@ -12,18 +12,7 @@ interface PayLoadEdit {
   lable: string;
 }
 
-const initialState: History[] = [
-  {
-    id: 1,
-    query: "query { characters { results { id name image } } }",
-    save: true,
-  },
-  {
-    id: 2,
-    query: "query { characters { results { id name image } } }",
-    save: false,
-  },
-];
+const initialState: History[] = [];
 
 const HistorySlice = createSlice({
   name: "history",

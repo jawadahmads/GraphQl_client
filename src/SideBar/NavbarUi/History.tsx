@@ -11,7 +11,7 @@ function History() {
         dispatch(toggleHistory());
       }}
     >
-      <FaHistory size={30} />
+      <FaHistory size={22} />
     </StyledDivUi>
   );
 }

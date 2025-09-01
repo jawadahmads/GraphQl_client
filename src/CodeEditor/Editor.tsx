@@ -1,5 +1,4 @@
 import { useCallback } from "react";
-import RunCode from "./RunCode";
 import CodeMirror from "@uiw/react-codemirror";
 import { myTheme } from "./theme";
 import { graphql } from "cm6-graphql";

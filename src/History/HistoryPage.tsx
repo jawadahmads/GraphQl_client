@@ -12,6 +12,8 @@ const HeaderHistory = styled.header`
   align-items: center;
   height: 60px;
   margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 `;
 
 export const SpanSpace = styled.span`
@@ -44,7 +46,7 @@ function HistoryPage() {
   }
 
   return (
-    <div style={{ margin: "1rem" }}>
+    <div>
       <HeaderHistory>
         <h1>History</h1>
         <SpanSpace onClick={() => dispatch(clearAll())}>

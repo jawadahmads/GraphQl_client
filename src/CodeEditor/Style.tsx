@@ -60,7 +60,7 @@ export const editorStyling = EditorView.theme({
   },
 
   ".cm-activeLine.cm-line": {
-    borderRadius: "1rem",
+    borderRadius: "0.5rem",
   },
 
   ".cm-gutterElement.cm-activeLineGutter": {

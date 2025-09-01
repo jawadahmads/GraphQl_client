@@ -14,7 +14,6 @@ function ListHistory() {
   });
   const [isEditId, setIsEditId] = useState<number>();
   const dispatch = useDispatch();
-
   return (
     <div>
       {state.map((obj) => {
@@ -40,7 +39,7 @@ function ListHistory() {
             key={obj.id}
           >
             <div style={{ whiteSpace: "nowrap" }}>
-              {obj.lable ? obj.lable : obj.query}
+              {obj.lable ? obj.lable : obj.query === "" ? "empty" : obj.query}
             </div>
             <div style={{ display: "flex" }}>
               <SpanSpace onClick={() => dispatch(deleteHistory(obj.id))}>

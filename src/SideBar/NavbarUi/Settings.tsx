@@ -13,7 +13,7 @@ function Settings() {
         return dispatch(toggleSetting());
       }}
     >
-      <IoMdSettings size={30} />
+      <IoMdSettings size={22} />
     </StyledDivUi>
   );
 }

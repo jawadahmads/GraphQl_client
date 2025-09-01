@@ -12,7 +12,7 @@ function Shortcut() {
         return dispatch(toggleShortcutkey());
       }}
     >
-      <MdOutlineAppShortcut size={30} />
+      <MdOutlineAppShortcut size={22} />
     </StyledDivUi>
   );
 }

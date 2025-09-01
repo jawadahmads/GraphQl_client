@@ -6,28 +6,28 @@ export const myTheme = createTheme({
   settings: {
     background: "#27212E",
     backgroundImage: "",
-    foreground: "#75baff",
+    foreground: "#fbfff3",
     caret: "#ff0000",
-    selection: "#036dd626",
-    selectionMatch: "#036dd626",
+    selection: "#8a91991a",
+    selectionMatch: "#8a91991a",
     lineHighlight: "#8a91991a",
     gutterBackground: "#27212E",
     gutterForeground: "#ffffff",
   },
   styles: [
-    { tag: t.comment, color: "#787b8099" },
-    { tag: t.variableName, color: "#0080ff" },
-    { tag: [t.string, t.special(t.brace)], color: "#5c6166" },
-    { tag: t.number, color: "#5c6166" },
-    { tag: t.bool, color: "#5c6166" },
-    { tag: t.null, color: "#5c6166" },
-    { tag: t.keyword, color: "#5c6166" },
-    { tag: t.operator, color: "#5c6166" },
-    { tag: t.className, color: "#5c6166" },
-    { tag: t.definition(t.typeName), color: "#5c6166" },
-    { tag: t.typeName, color: "#5c6166" },
-    { tag: t.angleBracket, color: "#5c6166" },
-    { tag: t.tagName, color: "#5c6166" },
-    { tag: t.attributeName, color: "#5c6166" },
+    { tag: t.comment, color: "#75715E" }, // gray
+    { tag: t.variableName, color: "#17170b" }, // default white
+    { tag: [t.string, t.special(t.brace)], color: "#E6DB74" }, // yellow
+    { tag: t.number, color: "#AE81FF" }, // purple
+    { tag: t.bool, color: "#AE81FF" }, // purple
+    { tag: t.null, color: "#AE81FF" }, // purple
+    { tag: t.keyword, color: "#F92672" }, // pink/red
+    { tag: t.operator, color: "#F92672" }, // pink/red
+    { tag: t.className, color: "#A6E22E" }, // green
+    { tag: t.definition(t.typeName), color: "#66D9EF" }, // cyan
+    { tag: t.typeName, color: "#66D9EF" }, // cyan
+    { tag: t.angleBracket, color: "#F92672" }, // pink/red
+    { tag: t.tagName, color: "#F92672" }, // pink/red
+    { tag: t.attributeName, color: "#A6E22E" }, // green
   ],
 });

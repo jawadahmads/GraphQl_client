@@ -1,9 +1,8 @@
-import { ResizablePanel, ResizablePanelGroup } from "@/Xternals/ui/resizable";
 import Handler from "../CodeEditor/Handler";
 import Editor from "@/CodeEditor/Editor";
 import Output from "./Output";
 import RunCode from "@/CodeEditor/RunCode";
-import { relative } from "path";
+import { ResizablePanel, ResizablePanelGroup } from "@/Xternals/ui/resizable";
 
 function CodePanel() {
   return (
@@ -27,12 +26,12 @@ function CodePanel() {
 
           <ResizablePanel
             style={{
-              flex: "1",
               height: "100%",
               position: "relative",
               padding: "1rem",
             }}
           >
+            <RunCode />
             <Output />
           </ResizablePanel>
         </ResizablePanelGroup>

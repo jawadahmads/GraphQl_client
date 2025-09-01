@@ -13,15 +13,24 @@ interface PorpsModel extends PropsWithChildren {
   children: ReactElement;
 }
 
+export const BackDrop = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(255, 255, 255, 0.01);  */
+  backdrop-filter: blur(10px);
+  z-index: 1000000;
+`;
+
 const ModelDiv = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: "rgba(0, 0, 0, 0.5)";
   display: "flex";
   align-items: "center";
   justify-content: "center";
+  z-index: 10000000;
 `;
 
 function Modal({ isOpen, onClose, children }: PorpsModel) {
@@ -48,13 +57,13 @@ function Modal({ isOpen, onClose, children }: PorpsModel) {
       <ModelDiv ref={modalRef}>
         <div
           style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "8px",
+            background: "#27212E",
+            borderRadius: "1rem",
+            overflow: "hidden",
+            border: "1px solid rgba(128, 128, 128, 0.2)",
           }}
         >
           {children}
-          <button onClick={onClose}>Close</button>
         </div>
       </ModelDiv>
     </>,

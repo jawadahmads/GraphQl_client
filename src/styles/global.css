@@ -3,6 +3,13 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
+* {
+  font-family: "Fira Code";
+}
+
+.hljs {
+  background: transparent !important;
+}
 html::-webkit-scrollbar {
   width: 7px;
   height: 7px;
