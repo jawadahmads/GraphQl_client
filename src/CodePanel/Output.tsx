@@ -60,7 +60,11 @@ function Output() {
   return (
     <ScrollBarDiv>
       <pre style={{ padding: "1rem", marginTop: "1rem" }}>
-        <code ref={codeRef} className="json">
+        <code
+          ref={codeRef}
+          className="json"
+          style={{ fontFamily: "Fira code" }}
+        >
           {JSON.stringify(arr, null, 2)}
         </code>
       </pre>

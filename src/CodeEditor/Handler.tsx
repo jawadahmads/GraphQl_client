@@ -1,4 +1,4 @@
-import { ResizableHandle } from "@/Xternals/ui/resizable";
+import { ResizableHandle } from "@/components/ui/resizable";
 import { useState } from "react";
 
 function Handler() {

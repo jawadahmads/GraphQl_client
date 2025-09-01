@@ -10,7 +10,7 @@ import { useRef } from "react";
 import type { ImperativePanelHandle } from "react-resizable-panels";
 import CodePanel from "../CodePanel/CodePanel";
 import ResizeableComp from "@/CodeEditor/Handler";
-import { ResizablePanel, ResizablePanelGroup } from "@/Xternals/ui/resizable";
+import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 
 const StyledDiv = styled.div`
   display: flex;

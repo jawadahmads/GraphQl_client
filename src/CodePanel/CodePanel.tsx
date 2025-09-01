@@ -2,7 +2,7 @@ import Handler from "../CodeEditor/Handler";
 import Editor from "@/CodeEditor/Editor";
 import Output from "./Output";
 import RunCode from "@/CodeEditor/RunCode";
-import { ResizablePanel, ResizablePanelGroup } from "@/Xternals/ui/resizable";
+import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 
 function CodePanel() {
   return (

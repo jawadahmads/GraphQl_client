@@ -61,6 +61,7 @@ function Modal({ isOpen, onClose, children }: PorpsModel) {
             borderRadius: "1rem",
             overflow: "hidden",
             border: "1px solid rgba(128, 128, 128, 0.2)",
+            boxShadow: "5px 5px",
           }}
         >
           {children}

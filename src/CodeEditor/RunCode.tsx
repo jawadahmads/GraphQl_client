@@ -3,7 +3,7 @@ import type { RootState } from "@/store/store";
 import { useDispatch, useSelector } from "react-redux";
 import { type History } from "@/store/features/historySlice";
 import { FaPlay } from "react-icons/fa";
-import { Button } from "@/Xternals/ui/button";
+import { Button } from "@/components/ui/button";
 
 export function RunCode() {
   const query = useSelector((state: RootState) => {
